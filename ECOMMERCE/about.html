@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon-32x32.png" type="32x32.png">
+  <script src="cart.js"></script>
+  <title>Keybored - About Us</title>
+</head>
+<body>
+  <header>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand fs-4" href="#">keybored</a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasDarkNavbar">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+              </div>
+              
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">Catalogue</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Others</a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item active" href="about.html">About Us</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="game.html">Click?</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <button class="btn btn-link nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                      <i class="bi bi-search fs-5"></i>
+                    </button>
+                  </li>
+                  <li class="nav-item ms-2">
+                    <a class="nav-link" href="cart.html">
+                      <i class="bi bi-cart fs-5"></i>
+                      <span id="cart-count" class="badge bg-primary">0</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+  
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">About Us</h1>
+        <p class="lead text-muted">Passionate about mechanical keyboards since 2024</p>
+      </div>
+  
+      <div class="row g-4 py-4">
+        <div class="col-md-4">
+          <div class="text-center">
+            <i class="bi bi-keyboard fs-1 mb-3 text-primary"></i>
+            <h3>Our Mission</h3>
+            <p>To provide high-quality mechanical keyboards that enhance your typing experience while maintaining affordability and excellence.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="text-center">
+            <i class="bi bi-gear-fill fs-1 mb-3 text-primary"></i>
+            <h3>What We Do</h3>
+            <p>We offer a curated selection of pre-built keyboards, custom kits, and accessories. Each product is carefully selected to ensure quality and performance.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="text-center">
+            <i class="bi bi-people-fill fs-1 mb-3 text-primary"></i>
+            <h3>Our Community</h3>
+            <p>Join our growing community of keyboard enthusiasts. Share experiences, get advice, and be part of our passionate keyboard family.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row align-items-center py-5">
+        <div class="col-md-6">
+          <img src="assets/workshop.webp" alt="Our Workshop" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2 class="mb-4">Why Choose Us?</h2>
+          <div class="mb-3">
+            <h5><i class="bi bi-check2-circle text-success"></i> Quality Guaranteed</h5>
+            <p>Our products are GUARANTEED have the official warranty from the brands itself.</p>
+          </div>
+          <div class="mb-3">
+            <h5><i class="bi bi-check2-circle text-success"></i> Expert Support</h5>
+            <p>Our team of keyboard enthusiasts is always ready to help with your questions.</p>
+          </div>
+          <div class="mb-3">
+            <h5><i class="bi bi-check2-circle text-success"></i> Custom Solutions</h5>
+            <p>Create your perfect keyboard with our custom building service.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="text-center py-5">
+        <h2 class="mb-4">Ready to Start Your Keyboard Journey?</h2>
+        <p class="lead mb-4">Browse our collection or join the keyboard community today.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="catalog.html" class="btn btn-primary btn-lg">View Catalog</a>
+          <a href="anu blom ada hehe" class="btn btn-outline-primary btn-lg">Join The WhatsApp Community</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-dark text-light py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Email: punyakennyh@gmail.com<br>
+          Phone: (+62) 813-8383-7710</p>
+        </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="about.html" class="text-light">About Us</a></li>
+                <li><a href="#" class="text-light">Shipping Policy</a></li>
+                <li><a href="#" class="text-light">Returns</a></li>
+              </ul>
+          </div>
+          
+        <div class="col-md-4">
+          <h5>Newsletter</h5>
+            <form>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Enter your email">
+              </div>
+              <button type="submit" class="btn btn-light">Subscribe</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
