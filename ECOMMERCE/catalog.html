@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="cstyle.css">
+  <link rel="icon" href="assets/favicon-32x32.png" type="32x32.png">
+  <script src="cart.js"></script>
+  <title>Keybored - Catalogue</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fs-4" href="#">keybored</a>
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasDarkNavbar">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="catalog.html">Catalogue</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Others</a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="game.html">Click?</a></li>
+                  </ul>
+                </li>
+              </ul>
+              
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <button class="btn btn-link nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="bi bi-search fs-5"></i>
+                  </button>
+                </li>
+                <li class="nav-item ms-2">
+                  <a class="nav-link" href="cart.html">
+                    <i class="bi bi-cart fs-5"></i>
+                    <span id="cart-count" class="badge bg-primary">0</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="searchModalLabel">Search Products</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search for products...">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" id="searchBtn">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="addToCartToast" class="toast" role="alert">
+          <div class="toast-header">
+              <strong class="me-auto">Added to Cart</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+          </div>
+          <div class="toast-body">
+              Item has been added to your cart.
+          </div>
+      </div>
+  </div>
+
+  <section class="container mt-5">
+    <h2 class="mb-4">Prebuilt Keyboards</h2>
+      <div class="row g-4 mb-5">
+          <div class="col-md-3">
+            <div class="card h-100" data-product-id="spade65">
+              <a href="products/spade65.html" class="text-decoration-none">
+                <img src="assets/spade65.jpg" class="card-img-top" alt="Spade65">
+              </a>
+              <div class="card-body">
+                  <h5 class="card-title">Noir - Spade65</h5>
+                  <p class="card-text">65%, Aluminium, Tri-Mode Connection</p>
+                  <p class="fw-bold">$ 125.00</p>
+                  <a href="../products/spade65.html" class="btn btn-primary">View Product</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="rover84">
+            <a href="products/rover84.html" class="text-decoration-none">
+              <img src="assets/rover84.webp" class="card-img-top" alt="rover84">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">PressPlay - Rover84</h5>
+              <p class="card-text">75%, Aluminium, Tri-Mode Connection</p>
+              <p class="fw-bold">$ 110.00</p>
+              <a href="../products/rover84.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="m80x">
+            <a href="products/m80x.html" class="text-decoration-none">
+              <img src="assets/m80x.jpg" class="card-img-top" alt="M80X">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">MYNK - 80X</h5>
+              <p class="card-text">80%, Aluminium, Tri-mode Connection</p>
+              <p class="fw-bold">$ 100.00</p>
+              <a href="../products/m80x.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="w60he">
+            <a href="products/wooting.html" class="text-decoration-none">
+              <img src="assets/wooting.png" class="card-img-top" alt="Wooting 60HE+">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Wooting - 60HE+</h5>
+              <p class="card-text">60%, Hall Effect Switches, Wired</p>
+              <p class="fw-bold">$ 175.00</p>
+              <a href="../products/wooting.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+          <div class="col-md-3">
+            <div class="card h-100" data-product-id="timeless82v2">
+              <a href="products/timeless82v2.html" class="text-decoration-none">
+                <img src="assets/timeless82v2.jpg" class="card-img-top" alt="Spade65">
+              </a>
+              <div class="card-body">
+                  <h5 class="card-title">Noir - Timeless82 V2</h5>
+                  <p class="card-text">75%, Display Screen, Tri-Mode Connection</p>
+                  <p class="fw-bold">$ 99.00</p>
+                  <a href="../products/timeless82v2.html" class="btn btn-primary">View Product</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="apollo61lite">
+            <a href="products/apollo61.html" class="text-decoration-none">
+              <img src="assets/apollo61lite.webp" class="card-img-top" alt="Apollo61 Lite">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">PressPlay - Apollo61 Lite</h5>
+              <p class="card-text">60%, Gasket Mounting, Wired Connection</p>
+              <p class="fw-bold">$ 30.00</p>
+              <a href="../products/apollo61.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="xera87">
+            <a href="products/xera87.html" class="text-decoration-none">
+              <img src="assets/xera87.jpg" class="card-img-top" alt="Xera87">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Vortex Series - Xera87</h5>
+              <p class="card-text">80%, Gasket Mounting, Tri-mode Connection</p>
+              <p class="fw-bold">$ 40.00</p>
+              <a href="../products/xera87.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="w80he">
+            <a href="products/wooting80.html" class="text-decoration-none">
+              <img src="assets/wooting80.png" class="card-img-top" alt="Wooting 80HE">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Wooting - 80HE</h5>
+              <p class="card-text">80%, Hall Effect Switches, Wired</p>
+              <p class="fw-bold">$ 200.00</p>
+              <a href="../products/wooting80.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+          <div class="col-md-3">
+            <div class="card h-100" data-product-id="timelesshe">
+              <a href="products/timelesshe.html" class="text-decoration-none">
+                <img src="assets/timelesshe.jpg" class="card-img-top" alt="Timeless HE">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Noir - Timeless HE</h5>
+                <p class="card-text">75%, Hall Effect, Wired Connection</p>
+                <p class="fw-bold">$ 99.00</p>
+                <a href="../products/timelesshe.html" class="btn btn-primary">View Product</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="maxfit61">
+            <a href="products/maxfit61.html" class="text-decoration-none">
+              <img src="assets/maxfit61.png" class="card-img-top" alt="maxfit61">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Fantech - Maxfit61</h5>
+              <p class="card-text">60%, Frosted Case, Wired Connection</p>
+              <p class="fw-bold">$ 30.00</p>
+              <a href="../products/maxfit61.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="al68">
+            <a href="products/al68.html" class="text-decoration-none">
+              <img src="assets/al68.jpg" class="card-img-top" alt="al68">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Yunzii - AL68</h5>
+              <p class="card-text">65%, Aluminium, Tri-mode Connection</p>
+              <p class="fw-bold">$ 110.00</p>
+              <a href="../products/al68.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100" data-product-id="xinmeng">
+            <a href="products/xinmeng.html" class="text-decoration-none">
+              <img src="assets/xinmeng.jpg" class="card-img-top" alt="xinmeng">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Xinmeng - M71</h5>
+              <p class="card-text">68%, Aluminium, Tri-Mode Connection</p>
+              <p class="fw-bold">$ 55.00</p>
+              <a href="../products/xinmeng.html" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer class="bg-dark text-light py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>Email: punyakennyh@gmail.com<br>
+            Phone: (+62) 813-8383-7710</p>
+          </div>
+            <div class="col-md-4">
+              <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                  <li><a href="about.html" class="text-light">About Us</a></li>
+                  <li><a href="#" class="text-light">Shipping Policy</a></li>
+                  <li><a href="#" class="text-light">Returns</a></li>
+                </ul>
+            </div>
+            
+          <div class="col-md-4">
+            <h5>Newsletter</h5>
+              <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn btn-light">Subscribe</button>
+              </form>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", function () {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+  
+      let found = false;
+  
+      cards.forEach(card => {
+        const productName = card.querySelector(".card-title").textContent.toLowerCase();
+        if (productName.includes(searchTerm)) {
+          card.style.display = "block"; // Show matching cards
+          found = true;
+        } else {
+          card.style.display = "none"; // Hide non-matching cards
+        }
+      });
+  
+      if (!found) {
+        alert("No products found matching your search.");
+      }
+      
+      // Close the modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById("searchModal"));
+      modal.hide();
+    });
+  </script>
+
+
+</body>
+</html>
